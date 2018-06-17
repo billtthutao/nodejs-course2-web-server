@@ -53,6 +53,12 @@ app.get('/about',(request,response) => {
   });
 });
 
+app.get('/projects',(request,response) =>{
+  response.render('projects.hbs',{pageTitle:'Some projects', 
+                                  pageHeader:'Projects'
+  });
+});
+
 app.get('/bad',(request,response) => {
   response.send({
     errorMessage: 'Unable to handle the request'
